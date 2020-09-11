@@ -1,0 +1,11 @@
+"","last_transaction_date","sku","ye_stock_on_hand","unit_cost","count_exception","exception","actual_unit_market"
+"1",2020-12-29,"ETKQW",100,36,1,"Obsolete_markdown",19.6243171300739
+"2",2020-12-30,"GEXDT",100,42,0,"No exception, count is accurate",42
+"3",2020-12-31,"JQWPP",100,35,0,"No exception, count is accurate",35
+"4",2020-12-24,"JRVPC",100,33,0,"No exception, count is accurate",33
+"5",2020-12-26,"QWBPM",100,36,0,"No exception, count is accurate",36
+"6",2020-12-30,"SLNEL",100,24,1,"Damaged",1.20586362853646
+"7",2020-12-27,"SSBIT",100,36,0,"No exception, count is accurate",36
+"8",2020-12-31,"TQLMI",100,34,0,"No exception, count is accurate",34
+"9",2020-12-30,"WBOEC",100,27,0,"No exception, count is accurate",27
+"10",2020-12-31,"ZUBSA",100,36,0,"No exception, count is accurate",36

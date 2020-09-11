@@ -1,0 +1,4 @@
+Model,Card,,Insider,,Portable,
+,loss,accuracy,loss,accuracy,loss,accuracy
+Autoencoder,0.1288626,0.8488889,0.2836543,0.8386111,0.08921734,0.845584
+Predict,0.3733788,0.96,0.4939784,0.808,0.6697008,0.724

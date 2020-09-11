@@ -1,0 +1,23 @@
+,
+SOX Reports: ,Count
+NASDAQ firms,1835
+NYSE firms,1563
+Total Firms,3398
+,
+SOX Reports on Automated Systems,27496
+SOX Reports on Manual Systems,31441
+Total SOX reports in NASDAQ & NYSE ,58937
+,
+Breach Data:,
+"Payment Card Fraud (CARD) - Fraud involving debit and credit cards that is not accomplished via hacking. For example, skimming devices at point-of-service terminals",12
+Unintended disclosure (DISC) - Sensitive information posted publicly on a website mishandled or sent to the wrong party via email fax or mail. ,70
+Hacking or malware (HACK) - Electronic entry by an outside party malware and spyware. ,106
+Insider (INSD) - Someone with legitimate access intentionally breaches information - such as an employee or contractor. ,51
+Physical loss (PHYS) - Lost discarded or stolen non-electronic records such as paper documents ,20
+Portable device (PORT) - Lost discarded or stolen laptop PDA smartphone portable memory device CD hard drive data tape and so forth. ,103
+Stationary device (STAT) - Lost discarded or stolen stationary electronic device such as a computer or server not designed for mobility. ,11
+Unknown (UNKN) ,15
+,
+Total number of breaches reported from 2005 to 2016 ,388
+Total number of breaches applicable to NYSE and NASDAQ listed firms ,213
+Unique firms in breach dataset listed on NYSE & NASDAQ,184

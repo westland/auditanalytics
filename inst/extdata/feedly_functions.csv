@@ -1,0 +1,18 @@
+Function,Action
+feedly_access_token,Retrieve the Feedly Developer Token
+feedly_categories,Show Feedly Categories
+feedly_collections,Retrieve Feedly Connections
+feedly_continue,Helper function to iterate through a 'feedly_stream()' result...
+feedly_feed_meta,Retrieve Metadata for a Feed
+feedly_opml,Retrieve Your Feedly OPML File
+feedly_profile,Retrieve Your Feedly Profile
+feedly_search_contents,Search content of a stream
+feedly_search_title,"Find feeds based on title, url or '#topic'"
+feedly_stream,"Retrieve contents of a Feedly ""stream"""
+feedly_subscribe,Subscribe to an RSS feed
+feedly_subscriptions,Retrieve Feedly Subscriptions
+feedly_tags,Retrieve List of Tags
+global_resource_ids,Global Resource Ids
+pipe,Pipe operator
+render_stream,Render a Feedly Stream Data Frame to RMarkdown
+seymour,Tools to Work with the 'Feedly' 'API'
