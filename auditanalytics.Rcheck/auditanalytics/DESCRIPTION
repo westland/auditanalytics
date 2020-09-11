@@ -1,0 +1,14 @@
+Package: auditanalytics
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+NeedsCompilation: no
+Packaged: 2020-09-10 23:15:42 UTC; westland
+Built: R 3.6.3; ; 2020-09-10 23:15:50 UTC; unix
