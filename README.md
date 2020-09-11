@@ -36,6 +36,7 @@ devtools::install_github("westland/auditanalytics")
 ## Chapters
 
 - Preface and Frontmatter
+- Foreword by Erik Brynjolfsson
 1. Fundamentals of Auditing Financial Statements
 1. Foundations of Audit Analytics
 1. Analysis of Accounting Transactions
