@@ -29,7 +29,7 @@ Using R and RStudio, the book demonstrates how to render an audit opinion that i
 The _auditanalytics_ package contains a collection of data sets used in the book. It also contains all code found in the book, organized by code chunks, and executable in an interactive fashion. It can be installed directly from github with:
 
 ```
-devtools::install_github("westland/audit_analytics/auditanalytics")
+devtools::install_github("westland/auditanalytics")
 ```
 (Note: You may need to install devtools first if it is not already installed.)
 
