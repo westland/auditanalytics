@@ -40,17 +40,17 @@ _(You can download the R code for each of the "Audit Analytics" chapters by clic
 - Foreword by Erik Brynjolfsson
 1. [Fundamentals of Auditing Financial Statements](https://github.com/westland/test/blob/master/Notebooks/ch_1_aud_fs.Rmd)
 1. [Foundations of Audit Analytics](https://github.com/westland/test/blob/master/Notebooks/ch_2_statistics_analytics.Rmd)
-1. Analysis of Accounting Transactions
-1. Risk Assessment and Planning
-1. Analytical Review: Technical Analysis
-1. Analytical Review: Intelligence Scanning
-1. Design of Audit Programs
-1. Interim Compliance Tests
-1. Substantive Tests
-1. Sarbanes-Oxley Engagements
-1. Blockchains, Cybercrime and Forensics
-1. Special Engagements: Forecasts and Valuation
-1. Simulated Transactions for Auditing Service Organizations
+1. [Analysis of Accounting Transactions](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_3_acct_transactions.Rmd)
+1. [Risk Assessment and Planning](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_4_planning.Rmd)
+1. [Analytical Review: Technical Analysis](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_5_analytical_review_tech)
+1. [Analytical Review: Intelligence Scanning](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_6_analytical_review_inte)
+1. [Design of Audit Programs](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_7_design_of_audit.Rmd)
+1. [Interim Compliance Tests](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_8_interim_compliance.Rm)
+1. [Substantive Tests](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_9_substantive.Rmd)
+1. [Sarbanes-Oxley Engagements](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_10_SOX.Rmd)
+1. [Blockchains, Cybercrime and Forensics](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_11_block_fraud.Rmd)
+1. [Special Engagements: Forecasts and Valuation](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_12_special.Rmd)
+1. [Simulated Transactions for Auditing Service Organizations](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_13_simulation.Rmd)
 
 
 
