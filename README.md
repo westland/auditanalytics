@@ -26,7 +26,7 @@ Using R and RStudio, the book demonstrates how to render an audit opinion that i
 
 [Waterstones](https://www.waterstones.com/book/audit-analytics/j-christopher-westland//9783030490904)
 
-The _auditanalytics_ package contains a collection of data sets used in the book. The R Notebooks available below use these datasets, as well as dependent packages. The _auditanalytics_ package can be installed directly from github with:
+The _auditanalytics_ package contains a collection of data sets used in the book.  R Notebooks which contain the code in Audit Analytics are available below, and use these datasets as well as dependent packages. The _auditanalytics_ package can be installed directly from github with:
 
 ```
 devtools::install_github("westland/auditanalytics")
