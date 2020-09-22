@@ -40,8 +40,8 @@ _(You can download the R code for each of the "Audit Analytics" chapters by clic
 
 - Preface and Frontmatter
 - Foreword by Erik Brynjolfsson
-1. [Fundamentals of Auditing Financial Statements](https://github.com/westland/test/blob/master/Notebooks/ch_1_aud_fs.Rmd)
-1. [Foundations of Audit Analytics](https://github.com/westland/test/blob/master/Notebooks/ch_2_statistics_analytics.Rmd)
+1. [Fundamentals of Auditing Financial Statements](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_1_aud_fs.Rmd)
+1. [Foundations of Audit Analytics](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_2_statistics_analytics.Rmd)
 1. [Analysis of Accounting Transactions](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_3_acct_transactions.Rmd)
 1. [Risk Assessment and Planning](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_4_planning.Rmd)
 1. [Analytical Review: Technical Analysis](https://github.com/westland/auditanalytics/blob/main/Notebooks/ch_5_analytical_review_tech)
