@@ -1,0 +1,39 @@
+"","ticker","name","price","change","percent_change","volume","vol_ave","capitalization","pe_ratio"
+"1","HSBC-PA","HSBC Holdings plc ADR A 1/40PF A",26.45,10,0,26376,61496,26,56.04
+"2","BRK-B","Berkshire Hathaway Inc.",201.16,21,0.97,2018000,3781000,25,0.01
+"3","BRK-A","Berkshire Hathaway Inc.",301936,22,0.88,243,245,24,17.14
+"4","V","Visa Inc.",180.07,7,-0.48,3594000,6906000,23,34.58
+"5","JPM","JPMorgan Chase & Co.",108.71,20,1.02,6506000,11488000,19,11.12
+"6","SAN-PB","Banco Santander, S.A. GTD PFD SECS 6",22.72,12,0.18,11997,19388,20,49.93
+"7","JPM-PD","JPMorgan Chase & Co.",27.75,2,-0.04,80365,139221,22,2.84
+"8","BAC-PL","Bank of America Corporation",1424.47,9,-0.24,4566,7443,17,506.93
+"9","JPM-PC","JPMorgan Chase & Co.",28.05,16,0.36,89764,198076,21,2.87
+"10","BAC-PK","Bank of America Corporation",27.17,3,-0.11,38020,79040,14,9.67
+"11","WFC-PL","Wells Fargo & Company",1441,8,-0.07,4284,7758,11,297.54
+"12","BAC-PC","Bank of America Corporation",26.32,3,-0.11,54159,64915,12,9.37
+"13","BAC-PY","Bank of America Corporation",25.78,6,-0.27,86124,85711,13,9.17
+"14","WFC-PY","Wells Fargo & Company",26.9,18,0.44,22397,44849,9,5.55
+"15","BAC-PE","Bank of America Corporation",23.24,5,-0.26,12949,19746,16,8.27
+"16","WFC-PX","Wells Fargo & Company",26.43,19,0.53,140922,75739,10,5.46
+"17","WFC-PW","Wells Fargo & Company",26.41,12,0.15,37491,38330,4,5.45
+"18","WFC-PR","Wells Fargo & Company",28.66,17,0.4,30950,59600,2,5.92
+"19","WFC-PN","Wells Fargo & Company",25.7,17,0.43,54437,38812,7,5.31
+"20","WFC-PO","Wells Fargo & Company",25.68,14,0.31,21577,29988,8,5.3
+"21","WFC-PQ","Wells Fargo & Company",26.92,17,0.41,80933,138836,6,5.56
+"22","BML-PL","Bank of America Corporation",22.3,15,0.41,32345,29831,15,7.94
+"23","BML-PG","Bank of America Corporation",20.88,4,-0.19,5700,5755,18,7.43
+"24","WFC-PP","Wells Fargo & Company",25.58,13,0.24,20982,30055,5,5.28
+"25","WFC-PV","Wells Fargo & Company",26.35,11,0.08,34142,40882,3,5.44
+"26","","",NA,1,NA,NA,NA,1,NA
+"27","","",NA,1,NA,NA,NA,1,NA
+"28","","",NA,1,NA,NA,NA,1,NA
+"29","","",NA,1,NA,NA,NA,1,NA
+"30","","",NA,1,NA,NA,NA,1,NA
+"31","","",NA,1,NA,NA,NA,1,NA
+"32","","",NA,1,NA,NA,NA,1,NA
+"33","","",NA,1,NA,NA,NA,1,NA
+"34","","",NA,1,NA,NA,NA,1,NA
+"35","","",NA,1,NA,NA,NA,1,NA
+"36","","",NA,1,NA,NA,NA,1,NA
+"37","","",NA,1,NA,NA,NA,1,NA
+"38","","",NA,23,NA,NA,NA,1,NA

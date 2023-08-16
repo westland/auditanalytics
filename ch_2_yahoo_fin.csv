@@ -1,0 +1,39 @@
+ticker,name,price,change,percent_change,volume,vol_ave,capitalization,pe_ratio
+HSBC-PA,HSBC Holdings plc ADR A 1/40PF A,26.45,0.00,0.00,26376.00,61496.00,541.154B,56.04
+BRK-B,Berkshire Hathaway Inc.,201.16,1.92,0.97,2018000.00,3781000.00,493.498B,0.01
+BRK-A,Berkshire Hathaway Inc.,301936.00,2631.00,0.88,243.00,245.00,492.962B,17.14
+V,Visa Inc.,180.07,-0.87,-0.48,3594000.00,6906000.00,403.496B,34.58
+JPM,JPMorgan Chase & Co.,108.71,1.10,1.02,6506000.00,11488000.00,347.679B,11.12
+SAN-PB,"Banco Santander, S.A. GTD PFD SECS 6",22.72,0.04,0.18,11997.00,19388.00,349.445B,49.93
+JPM-PD,JPMorgan Chase & Co.,27.75,-0.01,-0.04,80365.00,139221.00,368.674B,2.84
+BAC-PL,Bank of America Corporation,1424.47,-3.38,-0.24,4566.00,7443.00,280.151B,506.93
+JPM-PC,JPMorgan Chase & Co.,28.05,0.10,0.36,89764.00,198076.00,367.953B,2.87
+BAC-PK,Bank of America Corporation,27.17,-0.03,-0.11,38020.00,79040.00,272.577B,9.67
+WFC-PL,Wells Fargo & Company,1441.00,-1.00,-0.07,4284.00,7758.00,225.215B,297.54
+BAC-PC,Bank of America Corporation,26.32,-0.03,-0.11,54159.00,64915.00,266.681B,9.37
+BAC-PY,Bank of America Corporation,25.78,-0.07,-0.27,86124.00,85711.00,267.475B,9.17
+WFC-PY,Wells Fargo & Company,26.90,0.12,0.44,22397.00,44849.00,219.628B,5.55
+BAC-PE,Bank of America Corporation,23.24,-0.06,-0.26,12949.00,19746.00,276.042B,8.27
+WFC-PX,Wells Fargo & Company,26.43,0.14,0.53,140922.00,75739.00,220.156B,5.46
+WFC-PW,Wells Fargo & Company,26.41,0.04,0.15,37491.00,38330.00,214.807B,5.45
+WFC-PR,Wells Fargo & Company,28.66,0.11,0.40,30950.00,59600.00,211.288B,5.92
+WFC-PN,Wells Fargo & Company,25.70,0.11,0.43,54437.00,38812.00,216.64B,5.31
+WFC-PO,Wells Fargo & Company,25.68,0.08,0.31,21577.00,29988.00,216.906B,5.30
+WFC-PQ,Wells Fargo & Company,26.92,0.11,0.41,80933.00,138836.00,216.366B,5.56
+BML-PL,Bank of America Corporation,22.30,0.09,0.41,32345.00,29831.00,274.763B,7.94
+BML-PG,Bank of America Corporation,20.88,-0.04,-0.19,5700.00,5755.00,281.902B,7.43
+WFC-PP,Wells Fargo & Company,25.58,0.06,0.24,20982.00,30055.00,215.543B,5.28
+WFC-PV,Wells Fargo & Company,26.35,0.02,0.08,34142.00,40882.00,212.921B,5.44
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,ticker,,,,,

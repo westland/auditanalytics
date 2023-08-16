@@ -1,0 +1,5 @@
+,proportion,actual<dbl>,predict<dbl>,n<int>,freq<dbl>
+Correct – No Breach,0.876,0,0,219,0.93589744
+Type II error,0.060,0,1,15,0.06410256
+Type I error,0.064,1,0,16,1
+Correct –  Breach,0.000,1,1,0,

@@ -1,0 +1,21 @@
+,,
+SOX 302 metrics:,,
+IS_EFFECTIVE (302),Self-reported management assertion concerning whether internal controls are effective in the firm. ,"0 = no 
+1= yes"
+MATERIAL_WEAKNESS (302),Self-reported management assertion concerning whether there exist material weaknesses in internal control systems in the company.   ,"0 = controls are effective
+1 = there are material weaknesses in the firm's controls"
+SIG_DEFICIENCY (302),Self-reported management assertion concerning whether there exist significant deficiencies in internal control systems in the company,"0 = controls are effective
+1 = there are deficiencies in the firm's controls
+ "
+,,
+SOX 404 metrics:,,
+IC_OP_TYPE,Manual system or Automated computer system  ,"0 = Manual
+1 = Automated"
+AUDITOR_AGREES (404),Auditors ‘attestation’ concerning management's SOX 404 assertions ,"0 = disagree
+1 = agrees "
+COMBINED_IC_OP (404),Combined opinion on the effectiveness of the firm’s internal controls,"0 = controls are generally effective
+1 = there exists a significant control deficiency"
+IC_IS_EFFECTIVE (404),Management asserts that internal controls are effective (Internal Control is Effective),"0 = no
+1 = yes
+"
+AUDIT_FEE,Cost of SOX 404 audit,(numeric and monetary)
