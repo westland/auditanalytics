@@ -1,5 +1,7 @@
 # BayesAB
-(This GitHub repository contains files and information for my book Bayesian A/B Decision Models
+__(This GitHub repository contains files and information for my book Bayesian A/B Decision Models)__
+
+
 Bayesian A/B decision models have evolved significantly in statistical analysis and decision-making,  especially over the last decade. This preface introduces my book, "Bayesian A/B Decision Models," which encapsulates my experience utilizing these models in highly specialized areas such as auditing and as an expert witness in computing damages for corporate and industrial business legal cases.
 
 My journey began with a recognition that, while traditional statistical methods provided valuable insights, they often fell short in addressing complex, real-world problems where nuanced decision-making is crucial. The Bayesian A/B decision approach, although initially daunting due to its complexity and the steep learning curve, offered a robust alternative. The startup costs -- both in time and effort -- to master this advanced statistical tool are nontrivial, yet the benefits it brought to my professional capabilities were well worth the effort.
