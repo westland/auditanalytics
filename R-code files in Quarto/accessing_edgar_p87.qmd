@@ -1,0 +1,232 @@
+---
+title: "accessing_edgar_p87"
+format: html
+editor: visual
+---
+
+## Accessing the SEC's EDGAR Database of Financial Information 
+
+One of the first steps in planning and analytical review is a review of current and prior year filings with the SEC.  These will include annual and quarterly financial statements, restatements, proxy statements, lawsuits, and numerous other documents, where their acquisition and incorporation into workpapers is an essential prerequisite of audit planning.  Fortunately, complete information is available on the SEC's website at sec.gov.  Many of the most relevant documents to an audit are maintained by the SEC in XBRL format (as .XML files) which can be downloaded into the working papers from the Internet.  XBRL is *eXtensible Business Reporting Language*, a freely available, global markup language for exchanging business information.   XBRL allows the expression of semantic meaning, which lends to an unambiguous definition of accounts and other financial information.   XBRL representations of financial reports are more reliable and less subject to misinterpretation than are disseminations in other formats.  XBRL also allows for automated parsing of information, which can greatly improve the efficiency of audit ratio and statistical analysis.
+
+The following code chunk accesses the SEC's XBRL databases to acquire current and prior year filings for any listed company, and read it as a dataset that can be manipulated by R.  For this example, we extract General Motors' 2016 and 2017 financials from the EDGAR database at sec.gov.  I use the `finstr` package to access EDGAR files.
+
+```{r message=F,error=F, warning=F}
+
+library(devtools)
+install_github("bergant/finstr")
+library(finstr)
+library(XBRL)
+
+# Locate the XBRL format 10-K reports for years 2016 and 2017
+# Search sec.gov for General Motors, choose the 10-K for the year
+
+# Note that .xml is the XBRL file indicator)
+
+xbrl_url2016 <-
+"https://www.sec.gov/Archives/edgar/data/1467858/000146785817000028/gm-20161231.xml"
+
+xbrl_url2017 <-
+"https://www.sec.gov/Archives/edgar/data/1467858/000146785818000022/gm-20171231.xml"
+
+# Get EDGAR data in XBRL format from the sec.gov site
+# parse XBRL (GM 10-K reports)
+old_o <- options(stringsAsFactors = FALSE)
+xbrl_data_2016 <- xbrlDoAll(xbrl_url2016)
+xbrl_data_2017 <- xbrlDoAll(xbrl_url2017)
+options(old_o)
+
+## With xbrl_get_statements convert sec.gov's XBRL data to a list of lists
+
+st2017 <- xbrl_get_statements(xbrl_data_2017)
+st2016 <- xbrl_get_statements(xbrl_data_2016)
+
+st2017 
+
+```
+
+
+The 10-K XBRL file is a list of four lists -- balance sheet, income statement, cash flow and comprehensive income.  Content and names used will vary widely from company to company, and from particular filing or statement. Thus it is important to inspect the files that are retrieved to determine the correct variable names, data formats and structure of each XBRL file prior to any subsequent analysis.  Once the financial statements are loaded into the R session, the `finstr` package contains several commands to check consistency of the reports and to display data in a format suitable for auditing.  The following code chunks provide examples of some of the most useful commands in the `finstr` package.
+
+
+```{r  message=F,error=F, warning=F}
+
+
+library(tidyverse)
+library(kableExtra)
+
+## To get a single statement, assign one of the four lists, e.g.
+
+balance_sheet2017 <- st2017$ConsolidatedBalanceSheets
+balance_sheet2016 <- st2016$ConsolidatedBalanceSheets
+income2017 <- st2017$ConsolidatedIncomeStatements
+income2016 <- st2016$ConsolidatedIncomeStatements
+
+## Print the balance sheet; 
+## capture the output to a NULL file, and 
+## reformat with the kableExtra package
+
+capture.output(
+  bs_table <- 
+    print(
+      balance_sheet2017, 
+      html = FALSE, 
+      big.mark = ",",    
+      dateFormat = "%Y"), 
+  file='NUL')
+
+bs_table %>% 
+  kable(longtable=T, 
+        caption="Balance Sheet",
+        "latex", 
+        booktabs = T) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = F, font_size=10) 
+
+
+```
+
+
+Planning review looks for changes from prior years, or trends that may be important in the current year's audit.  The `merge()` command consolidate the information from different .XML files into single files.
+
+
+```{r message=F,error=F, warning=F}
+
+
+library(tidyverse)
+library(kableExtra)
+
+## Use merge function to create single financial statement data from two statements.
+
+balance_sheet <- merge(balance_sheet2017, balance_sheet2016)
+
+## Print the balance sheet; 
+## capture the output to a NULL file, and 
+## reformat with the kableExtra package
+
+capture.output(bs_table <- 
+                 print(balance_sheet2017, 
+                       html = FALSE, 
+                       big.mark = ",", 
+                       dateFormat = "%Y"), 
+               file='NUL')
+
+bs_table %>% 
+  kable(longtable=T, 
+        caption="Merged Balance Sheet",
+        "latex", 
+        booktabs = T) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = F, font_size=10) 
+
+
+
+```
+
+
+The `check_statement()` command in `finstr` will automatically validate internal consistency of transaction lines and summary lines in the EDGAR filings.
+
+
+```{r message=F,error=F, warning=F}
+
+library(tidyverse)
+
+##  Recalculate higher order concepts from basic values and check for errors.
+
+check <- check_statement(balance_sheet2017)
+check
+
+## In case of error the numbers with errors will be presented along with elements:
+
+check_statement(
+  within(balance_sheet2017, InventoryNet <- InventoryNet * 2)
+)
+
+
+## validation returns all calculation results in a readable data frame. 
+## e.g., operating income from income statement:
+
+check <- check_statement(income2017, element_id = "OperatingIncomeLoss")
+check
+
+check$expression[1]
+
+check$calculated / 10^6
+
+```
+
+
+Rearranging statements is often a useful step before actual calculations.  Rearrangements can offer several advantages in ad hoc analyses such as analytical review:
+
+- We can avoid errors in formulas with many variables,
+
+- Accounting taxonomies do change and using many formulas on original statement is harder to support than using custom hierarchy for analysis starting point,
+
+- When sharing analysis it is easier to print fewer values.
+
+To rearrange the statement to simple two-level hierarchy use the `expose` function.
+
+
+```{r message=F,error=F, warning=F}
+
+expose( balance_sheet,
+  
+  # Assets
+  `Current Assets` = "AssetsCurrent",
+  `Noncurrent Assets` = other("Assets"),
+
+  # Liabilites and equity
+  `Current Liabilities` = "LiabilitiesCurrent",
+  `Noncurrent Liabilities` = other(c("Liabilities", "CommitmentsAndContingencies")),
+  `Stockholders Equity` = "StockholdersEquity"
+)
+
+```
+
+Here, the balance sheet stays divided by assets, liabilities and equity. For the second level we are `exposing` current assets from noncurrent and similarly for the liabilities. We choose to separate equity.
+
+Function `expose` expects a list of vectors with element names. Function `other` helps us identify elements without enumerating every single element. Using `other` reduces potential errors, as the function knows which elements are not specified and keeps the balance sheet complete.
+
+Sometimes it is easier to define a complement than a list of elements. In this case we can use the`%without%` operator. Lets expose, for example, tangible and then intangible assets:
+
+
+```{r message=F,error=F, warning=F}
+
+library(tidyverse)
+library(kableExtra)
+
+expose( balance_sheet,
+  
+  # Assets
+  `Tangible Assets` = 
+    "Assets" %without% c("AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent", "NotesAndLoansReceivableNetCurrent","gm_AssetsSubjecttoorAvailableforOperatingLeaseNetCurrent"),
+  `Intangible Assets` = other("Assets"),
+
+  # Liabilites and equity
+  `Liabilities` = c("Liabilities", "CommitmentsAndContingencies"),
+  `Stockholders Equity` = "StockholdersEquity"
+)
+
+## To calculate lagged difference for entire statement use diff function. 
+## The result is statement of changes between successive years
+
+diff_bs <- diff(balance_sheet)
+
+
+## Print the lagged differences; capture the output to a NULL file, and reformat with the kableExtra package
+
+capture.output(bs_table <- print(diff_bs, html = FALSE, big.mark = ",", dateFormat = "%Y"), file='NUL')
+
+bs_table %>% 
+  kable(longtable=T, 
+        caption="Lagged Differences in Balance Sheets",
+        "latex", 
+        booktabs = T) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = F, font_size=10) 
+
+
+
+
+```
+
+
+These are the basic tools that you need to access the information on sec.gov.  Note that there are numerous reports on EDGAR; `finstr` will be able to access and format any financial statements in XBRL format on the EDGAR database.  Almost all of the EDGAR information is maintained in HTML format, and I will provide code later in this chapter to access and parse HTML files in EDGAR.
+
+
