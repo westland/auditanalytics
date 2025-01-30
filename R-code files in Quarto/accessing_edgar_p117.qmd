@@ -6,9 +6,8 @@ editor: visual
 
 ### Accessing Financial Information from EDGAR (https://www.sec.gov/edgar/)
 
-The EDGAR database at https://www.sec.gov/edgar.shtml [www.sec.gov/edgar.shtml](https://www.sec.gov/edgar.shtml) offers a wealth of financial information on industry competitors, but only if they are publicly traded companies.  Use package `edgar` to extract this information.
+The EDGAR database at https://www.sec.gov/edgar.shtml [www.sec.gov/edgar.shtml](https://www.sec.gov/edgar.shtml) offers a wealth of financial information on industry competitors, but only if they are publicly traded companies. Use package `edgar` to extract this information.
 
- 
 ```{r }
 
 
@@ -95,10 +94,7 @@ ggplot(sentiment_analysis, aes(sentiment, n)) +
 
 ```
 
-       
-        
 ### Accessing Financial Information from EDGAR (https://www.sec.gov/edgar/) with the `finreportr` Package
-
 
 ```{r }
 
@@ -114,12 +110,10 @@ tesla_cf <- GetCashFlow("TSLA", 2018)
 
 head(tesla_inc)
 
-``` 
+```
 
-The `finreportr` package returns a data.frame in 'long form'.  Because analysis typically benefits from datasets in 'short form' with one row per account, `finreportr` data.frames need to be reshaped.  Hadley Wickham has created a comprehensive package called `reshape2` that uses metaphors of `melt` and `cast`. You `melt` data so that each row is a unique id-variable combination (i.e., is in 'long form') and then you `cast` the melted data into any shape you would like.  There are specific commands for casting data.frames `dcast`, arrays `acast`, and so forth. In the next example, we take the Tesla income statement in 'long form' that we acquired with the `finreportr` package and `dcast` it into a more usable form.
+The `finreportr` package returns a data.frame in 'long form'. Because analysis typically benefits from datasets in 'short form' with one row per account, `finreportr` data.frames need to be reshaped. Hadley Wickham has created a comprehensive package called `reshape2` that uses metaphors of `melt` and `cast`. You `melt` data so that each row is a unique id-variable combination (i.e., is in 'long form') and then you `cast` the melted data into any shape you would like. There are specific commands for casting data.frames `dcast`, arrays `acast`, and so forth. In the next example, we take the Tesla income statement in 'long form' that we acquired with the `finreportr` package and `dcast` it into a more usable form.
 
-
-      
 ```{r eval=T}
 
 library(tidyverse)
@@ -145,31 +139,12 @@ head(tesla_inc)
 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #### Computing Technical Metrics
 
-In the prior section, I showed you how to acquire financial information from the SEC's repositories. This section provides general guidelines for computing technical metrics such as ratios from that statement data.  Consider the calculation of the current ratio which is defined as:
+In the prior section, I showed you how to acquire financial information from the SEC's repositories. This section provides general guidelines for computing technical metrics such as ratios from that statement data. Consider the calculation of the current ratio which is defined as:
 
-$$ Current Ratio = \frac{Current Assets}{Current Liabilities} $$
-Here is how to calculate the ratio from our merged balance sheet obtained from EDGAR data using the `finstr` package. 
- 
+$$ Current Ratio = \frac{Current Assets}{Current Liabilities} $$ Here is how to calculate the ratio from our merged balance sheet obtained from EDGAR data using the `finstr` package.
+
 ```{r message=F,error=F, warning=F}
 
 library(devtools)
@@ -210,13 +185,11 @@ balance_sheet %>% transmute(
 
 ```
 
-
-Other ratios may be calculated in a similar straightforward manner using the `dplyr` package in the `tidyverse` library.  Note that several other packages (e.g., `edgar`, `finreportr`) are available to extract EDGAR filings.  The `finstr` package can only process links to XBRL files, but `finreportr` can accesse data from both HTML and XBRL files.  
-
+Other ratios may be calculated in a similar straightforward manner using the `dplyr` package in the `tidyverse` library. Note that several other packages (e.g., `edgar`, `finreportr`) are available to extract EDGAR filings. The `finstr` package can only process links to XBRL files, but `finreportr` can accesse data from both HTML and XBRL files.
 
 ### Visualization of Technical Metrics
 
-Visualizations are compact, yet can reveal patterns that wouldn't be readily identified in the raw data.   This is because the human brain is much more attuned to analyzing visual scenes, than to analyzing lists of numbers and characters.  Visualizing financial statements exposes a limited number of key values, and emphasizes their relationships and trends. In the following code chunk, I aggregate a balance sheet by selected concepts.
+Visualizations are compact, yet can reveal patterns that wouldn't be readily identified in the raw data. This is because the human brain is much more attuned to analyzing visual scenes, than to analyzing lists of numbers and characters. Visualizing financial statements exposes a limited number of key values, and emphasizes their relationships and trends. In the following code chunk, I aggregate a balance sheet by selected concepts.
 
 ```{r message=F,error=F, warning=F}
 
@@ -271,4 +244,3 @@ bs_simple_prop <- proportional(bs_simple)
 finstr::plot_double_stacked_bar(bs_simple_prop)
 
 ```
-
